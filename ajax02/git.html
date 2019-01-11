@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="get" value="get">
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+    $("#get").click(function(){
+        //get 是通过地址来发送
+        //地址
+        $.get("https://api.apishop.net/communication/phone/getLocationByPhoneNum?",{
+          //第一条数据api
+            apiKey:"AmaksLJ1d912ef37aa53c4036ab1dc8f2156f497787678a",
+            //数据2
+            phoneNum:"北京"
+        },function(response){
+            console.log(response)
+        })
+    })
+})
+
+
+</script>
